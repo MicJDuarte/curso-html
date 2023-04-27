@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Query</title>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link rel="stylesheet" href="estilos/style.css">
+    <link rel="stylesheet" href="estilos/media-query.css">
+</head>
+<body onresize="mudouTamanho()">
+    <header>
+        
+        <h1>Meu site</h1>
+        <span id="burguer" class="material-symbols-outlined" onclick="clickMenu()">menu</span>
+        <menu id="itens">
+            <ul>
+                <li><a href="#">Opção 1</a></li>
+                <li><a href="#">Opção 2</a></li>
+                <li><a href="#">Opção 3</a></li>
+                <li><a href="#">Opção 4</a></li>
+                <li><a href="#">Opção 5</a></li>
+            </ul>
+        </menu>
+    </header>
+        <main>
+    
+            <article>
+                <h2>Testando Media Queries</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex iusto, quidem hic doloribus modi laboriosam harum incidunt illo similique ipsa? Ullam quibusdam, commodi velit incidunt quas voluptate minima delectus nobis? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio autem aliquid hic cum explicabo reprehenderit consequuntur quo eligendi iusto esse! Quod pariatur tempore suscipit repellat, ex fugit corporis similique odio!</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum aut asperiores fugiat iste numquam, nemo voluptatem eum eius autem laborum quia distinctio vel repellat mollitia expedita atque facilis, rem tenetur.</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe at culpa ab officiis nesciunt corrupti. Expedita repudiandae minus, explicabo, mollitia quaerat quae distinctio, facilis nulla praesentium amet ratione commodi. Alias. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum at labore culpa in. Laboriosam facilis similique suscipit dolore. Ullam temporibus hic itaque possimus voluptate dolorum facere dolore, provident fugit corporis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni saepe aut fuga quasi autem sit cumque deleniti repellendus vitae nulla! Accusamus doloribus et ab dolorem beatae voluptas vero laudantium rem.</p>
+            </article>
+        </main>
+        <script>
+            function mudouTamanho() {
+                if (window.innerWidth >= 768) {
+                    itens.style.display = 'block'
+                } else {
+                    itens.style.display = 'none'
+                }
+
+            }
+            function clickMenu() {
+                if (itens.style.display == 'block') {
+                    itens.style.display = 'none'
+                    
+                } else {
+                    itens.style.display = 'block'
+                }
+            }
+        </script>
+    
+    
+</body>
+</html>

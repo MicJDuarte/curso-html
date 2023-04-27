@@ -1,0 +1,220 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital@1&display=swap');
+@font-face {
+	font-family: 'FonteLogo';
+	src: url("../_fonts/bubblegum-sans-regular.otf");
+}
+
+body {
+			font-family: Arial, sans-serif; /*Para ficar com uma fonte não sarifada.*/
+			background-color: #dddddd;
+			color: rgba(0,0,0,1);
+		}
+div#interface {
+	width: 900px; /*Delimitando a largura*/
+	background-color: #ffffff; /*Fazer com que a nossa interface tenha um fundo branco*/
+	margin: -20px auto 0px auto;/* Minha margem vai ter -20px cima, auto direita, 0 px baixo, e auto esquerda, nessa ordem*/
+	box-shadow: 0px 0px 10px rgba(0,0,0,.5);/*Vai dar um efeito visual melhor ao site, deslocamento lateral 0px, vertical 0px, espalhamento das sombras 10px e a cor da sombra black.*/
+	padding: 10px 10px 10px 10px; /*Configuração do espaço interno para o texto não ficar colado nas margens*/
+}
+	
+		p {
+			text-align: justify;
+			text-indent: 50px;
+}
+a { /*Todo tipo de link vai ter ...*/
+	color: #606060; /*... uma cor escuta.*/
+	text-decoration: none; /*E não vai ter sublinhado.*/
+}
+a:hover {/* Quando passar o mouse sobre o link ele vai ficar...*/
+	text-decoration: underline; /*sublinhado*/
+	
+}
+img#icone {
+	position: absolute;
+	left: 900px;
+	top: 40px;
+}
+header#cabecalho {
+	border-bottom: 1px #606060 solid; /*Largura da borda em pixels, cor da borda e por ultimo o formato da borda*/
+	height: 150px;
+	background: url("../_imagens/glass-logo-peq.jpg") no-repeat 0px 80px; /* Fazer a logomarca do google glass aparecer diretamente no cabeçalho. O 0px é o deslocamento lateral e o 80px é o deslocamento vertical.*/
+}
+header#cabecalho h1 { /*Formatar o h1 do meu header#cabecalho*/
+	font-family: 'FonteLogo, sans-serif';
+	font-size: 30px;
+	color: #606060;
+	text-shadow: 1px 1px 1px rgba(0,0,0,.6);
+	padding: 0px;
+	margin-bottom: 0px;/*Margem de baixo*/
+}
+header#cabecalho h2 {
+	font-family: 'Titillium Web', sans-serif;
+	color: #888888;
+	font-size: 15pt;
+	padding: 0px;
+	margin-top: 0px;
+}
+	
+/*Formatação de imagens com legendas.*/
+figure.foto-legenda { /*Tudo que for do figure de classe foto-legenda, vai ter uma determinada formatação.*/
+	position: relative;
+	border: 8px solid white; /*Criando uma borda de largura o pixels, tipo de borda sólida e a cor da borda white.*/
+	box-shadow: 1px 1px 4px black; /* Inserindo uma ligeira sombra.*/
+}
+figure.foto-legenda img { /*Tudo que for img vai ter...*/
+	width: 100%; /*Largura 100%*/
+	height: 100%; /*Altura 100%*/
+	
+}
+figure.foto-legenda figcaption { /* Tudo que for figcaption vai ter ...*/
+	opacity: 0;
+	position: absolute; /* uma posição absoluta */
+	top: 0px;
+	background-color: rgba(0,0,0,.4); /* Criando um fundo translucido para legenda*/
+	color: white; 
+	width: 100%; /* Largura*/
+	height: 100%; /*Altura*/
+	padding: 10px; /*Criando um espaço dentro da legenda*/
+	box-sizing: border-box; /* Vai criar um box dentro da borda, corrigindo o deslocamento do fundo translucido.*/
+	transition: opacity 1s; /*Uma transição para minha opacidade no tempo de 1 segundo*/
+	
+}
+
+figure.foto-legenda:hover figcaption {
+	opacity: 1;
+}
+
+/*Formatação do menu.*/
+nav#menu {
+	display: block; /* Fazer com que meu menu possa flutuar pela tela*/
+}
+	
+
+nav#menu ul {
+	list-style: none; /* Some com os marcadores*/
+	text-transform: uppercase; /*Colocar as letras em maiúsculo*/
+	position: absolute; /*Vou querer que apenas a minha lista flutue pela tela*/
+	top: -20px;
+	left: 500px;
+	
+}
+nav#menu li {
+	display: inline-block; /*Vai fazer com que um bloco seja exibido na mesma linha*/
+	background-color: #dddddd; /*Deixar cinza claro os botões criados*/
+	padding: 10px; /*Deixar um espaço maior dentro dos botões*/
+	margin: 2px;
+	-webkit-transition: background-color 1s;/*utilizando um gerador de prefixos para funcionar em todos os navegadores*/
+	-o-transition: background-color 1s; 
+	transition: background-color 1s;
+	transition: background-color 1s; /*Efeito de transição no manu...*/
+}
+nav#menu li:hover { /*Quando passar o mouse´por cima do manu...*/
+	background-color: #606060; /*A cor vai alterar*/
+}
+
+nav#menu h1 {
+	display: none;
+}
+nav#menu a { /* Todo nav que tenha o id menu e que tenha um link (que é uma âncora...*/
+	color: #000000; /*Vai ter cor preta*/
+	text-decoration: none; /*Tirar o sublinhado do link*/
+}
+nav#menu a:hover { /*Vamos fazer com que o link mude de cor quando estiver ativo sobre o mouse*/
+	color: #ffffff;
+	text-decoration: underline; /*Quando eu passar o maouse por cima aparece sublinhado*/	
+}
+section#corpo {
+	display: block;
+	width: 500px;
+	float: left; /*Flutuar pelo lado esquerdo*/
+	border-right: 1px solid #606060; /*Borda solida do lado direito*/ 
+	padding-right: 15px; /*Espaço entre a linha criada e o texto.*/
+}
+article#noticia-principal h2 { /*Começar formatando todos os h2 que temos dentro de nosso article.*/
+	font-size: 13pt;
+	color: #606060;
+	background-color: #dddddd;
+	padding: 5px 0px 5px 10px;
+	margin: 10px 0px 10px 0px;	
+}
+header#cabecalho-artigo h1 {
+	font-family: 'Fontelogo', sans-serif;
+	font-size: 20pt;
+	color: #606060;
+	margin-bottom: 0px;
+	margin-top: 0px;
+}
+.direita {
+	text-align: right;
+}
+header#cabecalho-artigo h2 {
+	font-size: 13pt;
+	color: #cecece;
+	background-color: #ffffff;
+	margin: 0px;
+}
+header#cabecalho-artigo h3 {
+	font-size: 12px;
+	color: #606060;
+}
+table#tabelaspec { /*Criando borda para a tabela*/
+	border: 1px solid #606060;
+	border-spacing: 0px; /*Removendo os espaços entre as linhas da tabela*/
+	margin-left: auto;
+	margin-right: auto;
+}
+table#tabelaspec td {
+	border: 1px solid #606060; /*Criando bordas para todas as céclulas da tabela*/
+	padding: 10px; /*Espaço interno das células*/
+	text-align: center;
+	vertical-align: middle;
+}
+table#tabelaspec td.ce {
+	color: #ffffff; /*Cor da letra coluna da esquerda*/
+	background-color: #606060; /* Cor de fundo coluna esquerda*/
+	vertical-align: top; /*Alinhamento do texto L.E. de acordo com o projeto*/
+	font-weight: bold; /*Em negrito*/
+} 
+table#tabelaspec td.cd {
+	background-color: #cecece;
+}
+table#tabelaspec caption {
+	color: #888888;
+	font-size: 13pt;
+	font-weight: bolder;
+}
+table#tabelaspec caption span {
+	display: block;
+	float: right;
+	color: #000000;
+	font-size: 8pt; /*Tamanho da fonte.*/
+	margin-top: 10px; /*Alterando espaço da margem para a data ficar colada na borda da tabela.*/
+}
+aside#lateral {
+	display: block;
+	width: 350px;
+	float: right; /*Flutuar pelo lado direito*/
+	background-color: #dddddd;
+	padding: 10px;
+	margin-top: 10px;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.5);
+}
+aside#lateral h1 {
+	font-family: 'Fontelogo', sans-serif;
+	font-size: 20pt;
+	color: #606060;
+	margin-top: 0px;
+}
+aside#lateral h2 {
+	background-color: #606060;
+	font-size: 13pt;
+	color: #ffffff;
+	padding: 5px;
+}
+
+footer#rodape {
+	clear: both; /*Limpa para a interface ficar correta e o rodapé na parte de baixo no lugar correto*/
+	border-top: 1px solid #606060; /*Criando uma borda em cima do rodapé*/
+	
+}
